@@ -1,0 +1,37 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(kiwi.jpeg);
+    background-size: cover; 
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    font-size: larger;
+}
+
+h1 {
+    color: rgb(239, 236, 64);
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    color: rgb(109, 35, 35);
+    width: 150px;
+    background: rgb(239, 236, 64);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom:2px;
+    margin-top: 2px;
+
+}
+
+#player-el {
+    color: white;
+    text-shadow: 0px 0px 3px rgb(11, 52, 11);
+}
