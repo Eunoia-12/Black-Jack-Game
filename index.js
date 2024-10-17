@@ -14,7 +14,14 @@ let player = {
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 
-
+function chips() {
+    if (hasBlackJack === true){
+        player.chips += 100
+    } 
+    if (hasBlackJack === false){
+        player.chips -= 10
+    }  
+}
 
 function getRandomCard(){
     let randomNumber =  Math.floor(Math.random()*13) + 1

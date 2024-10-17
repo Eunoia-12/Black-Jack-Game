@@ -1,12 +1,13 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url(card.jpg);
-    background-size:cover; 
+    background-image: linear-gradient(#023047,#219ebc, #fff);
+    background-repeat: no-repeat;
     font-weight: bold;
     color: white;
     text-align: center;
     text-shadow: 1px 1px black;
     font-size: larger;
+    height: 100vh;
 }
 
 h1 {
