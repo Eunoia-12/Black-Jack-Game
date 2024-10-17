@@ -8,7 +8,7 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let player = {
     name : "Adriana",
-    chips : 148
+    chips : 100
 }
 
 let playerEl = document.getElementById("player-el")
