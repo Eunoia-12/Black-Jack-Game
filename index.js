@@ -14,6 +14,8 @@ let player = {
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 
+
+
 function getRandomCard(){
     let randomNumber =  Math.floor(Math.random()*13) + 1
     if (randomNumber > 10){
@@ -25,8 +27,9 @@ function getRandomCard(){
     }
 }
 
-function startGame() {
+function newGame() {
     isAlive = true
+    hasBlackJack = false
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
