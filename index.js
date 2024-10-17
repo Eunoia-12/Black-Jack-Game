@@ -1,3 +1,5 @@
+const infoButton = document.getElementById('info-btn');
+const info = document.getElementById('info')
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -7,20 +9,30 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let player = {
-    name : "Adriana",
+    name : "Player",
     chips : 100
 }
 
 let playerEl = document.getElementById("player-el")
-playerEl.textContent = player.name + ": $" + player.chips
 
-function chips() {
-    if (hasBlackJack === true){
+
+info.style.display = 'none'
+
+infoButton.addEventListener('click', () => {
+    if (info.style.display === 'none'){
+        info.style.display = 'block'
+    } else{
+        info.style.display = 'none'
+    }
+})
+
+function upadteChips() {
+    if (hasBlackJack){
         player.chips += 100
-    } 
-    if (hasBlackJack === false){
+    } else if (!isAlive){
         player.chips -= 10
     }  
+    playerEl.textContent = player.name + ": $" + player.chips
 }
 
 function getRandomCard(){
@@ -39,6 +51,7 @@ function newGame() {
     hasBlackJack = false
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
+    let chips = 100
     cards = [firstCard, secondCard]
     sum  = firstCard + secondCard 
     renderGame()
@@ -57,9 +70,10 @@ function renderGame() {
         hasBlackJack = true
     } else {
         message = "You're out of the game!"
-        isAlive = false  
+        isAlive = false 
     }
     messageEl.textContent = message
+    upadteChips()
 }
 
 
